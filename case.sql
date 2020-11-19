@@ -46,6 +46,7 @@ CREATE TABLE libro_lector (
     FOREIGN KEY (id_lector) REFERENCES lector(id)
 );
 
+--insertamos valores en la tabla editorial
 INSERT INTO editorial (id, nombre)
 VALUES (1,'UTHEA');
 INSERT INTO editorial (id, nombre)
@@ -55,6 +56,7 @@ VALUES (3,'McGraw-Hill');
 INSERT INTO editorial (id, nombre)
 VALUES (4,'MIR');
 
+--insertamos valores en la tabla libro
 INSERT INTO libro(  id , titulo , editorial )
 VALUES (515,'Ecuaciones diferenciales para ingenieros y científicos',1);
 INSERT INTO libro(  id , titulo , editorial )
@@ -66,6 +68,7 @@ VALUES (519,'Estadística',3);
 INSERT INTO libro(  id , titulo , editorial )
 VALUES (512,'Algebra Lineal',4);
 
+--insertamos valores en la tabla autor
 INSERT INTO autor(  id , nombre)
 VALUES (1,'Lambe C.G');
 INSERT INTO autor(  id , nombre)
@@ -85,6 +88,7 @@ VALUES (8,'Voevodin');
 INSERT INTO autor(  id , nombre)
 VALUES (9,'Valentín V');
 
+--insertamos valores en la tabla lector
 INSERT INTO lector(  id , nombre)
 VALUES (1,'Pérez');
 INSERT INTO lector( id , nombre)
@@ -109,8 +113,8 @@ INSERT INTO lector( id , nombre)
 VALUES (11,'Molina');
 INSERT INTO lector( id , nombre)
 VALUES (12,'Ana');
-INSERT INTO lector( id , nombre)
 
+--insertamos valores en la tabla-relacion libro_autor
 INSERT INTO libro_autor(  id , codigo_libro, id_autor)
 VALUES (1,515,1);
 INSERT INTO libro_autor(  id , codigo_libro, id_autor)
@@ -130,6 +134,7 @@ VALUES (8,512,8);
 INSERT INTO libro_autor(  id , codigo_libro, id_autor)
 VALUES (9,512,9);
 
+--insertamos valores en la tabla-relacion libro_lector
 INSERT INTO libro_lector( id, id_libro, id_lector, fecha_dev )
 VALUES (1,515,1,'2019-09-15');
 INSERT INTO libro_lector( id, id_libro, id_lector, fecha_dev )
